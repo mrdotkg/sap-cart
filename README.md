@@ -1,4 +1,4 @@
-# sap-cart - shipping cart based on Angular js and oojs
+# sap-cart - shopping cart based on Angular js and oojs
 
 ##Few points:
 * As asked the assignment is done on AngularJS as the framework and OOJs for the rest.
