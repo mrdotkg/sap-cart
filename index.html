@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cart">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Your Shopping Bag</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,600' rel='stylesheet' type='text/css'>
+    <script src="http://use.fontawesome.com/d050467cb2.js"></script>
+    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container" ng-controller="CartController">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-uppercase text-responsive logo-text">
+                Your Shopping Bag
+                <small class="pull-right visible-xs">{{cart.itemCount}} Items</small>
+            </h3>
+
+            <hr class="hidden-xs"/>
+            <section class="hidden-xs text-uppercase">
+                <div class="col-md-6 col-sm-6">
+                    {{cart.itemCount}} Items
+                </div>
+                <div class="col-md-6 col-sm-6 row pull-right text-right">
+                    <div class="col-md-4 col-sm-4">Size</div>
+                    <div class="col-md-4 col-sm-4">Qty</div>
+                    <div class="col-md-4 col-sm-4">Price</div>
+                </div>
+            </section>
+
+            <div class="clearfix"></div>
+
+            <product-list></product-list>
+
+            <grand-total></grand-total>
+
+        </div>
+    </div>
+</div>
+
+<!--Common Scripts-->
+<script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-2.0.0.min.js"></script>
+<script src="js/constants.js"></script>
+
+<!--Page specific Script-->
+<script src="cart/controllers/CartController.js"></script>
+<script src="cart/services/CartService.js"></script>
+<script src="cart/directives/CartDirective.js"></script>
+<script src="cart/components/CartComponent.js"></script>
+<script src="cart/components/ProductComponent.js"></script>
+
+<script src="common/modal/ModalController.js"></script>
+
+
+</body>
+
+</html>

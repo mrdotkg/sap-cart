@@ -1,0 +1,60 @@
+<section class="taxes row">
+    <div class="col-md-2 col-sm-2 hidden-xs">
+        <p><strong>Need help or have questions?</strong></p>
+        <p>Call Customer Serivces at 1-800-555-5555</p>
+        <p><a href="">Chat with one of our stylists</a></p>
+        <p><a href="">See return and exchange policy</a></p>
+    </div>
+
+    <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1">
+        <section class="products row coupon">
+            <div class="col-md-3 col-sm-3 col-xs-12">Enter promotion code or Gift Card</div>
+            <div class="text-right col-md-9 col-sm-9 col-xs-12 input">
+                <div class="col-md-10 col-sm-10 col-xs-10 row text-right">
+                    <input class="form-control inline"
+                           type="text"/></div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <button class="inline btn btn-default"> APPLY</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products tax-calculation row text-uppercase">
+            <div class="row item">
+                <div class="col-md-9 col-xs-9">SubTotal</div>
+                <div class="col-md-3 col-xs-3 text-right"><sup> $ </sup>{{cart.getSubTotal()}}</div>
+            </div>
+
+            <div ng-if="cart.discount"class="row item">
+                <div class="col-md-9 col-xs-9">{{cart.discount.rule.message}}</div>
+                <div class="col-md-3 col-xs-3 text-right"> - <sup> $ </sup>{{cart.discount.amount}}</div>
+            </div>
+
+            <div class="row item">
+                <div class="col-md-9 col-xs-9">Estimated Shipping<sup>*</sup>
+                    <p>You qualify for free shipping because your order is over $50<sup>*</sup></p>
+                </div>
+                <div class="col-md-3 col-xs-3 text-right">FREE</div>
+            </div>
+
+            <hr class="row"/>
+
+            <div class="row item">
+                <div class="col-md-9 col-xs-9"><h3 class="M0">Estimated Total</h3>
+                    <p>Tax will be applied during checkout</p>
+                </div>
+                <div class="col-md-3 col-xs-3 text-right"><strong><sup> $ </sup>{{cart.getGrandTotal()}}</strong></div>
+            </div>
+
+        </section>
+        <section class="products row text-uppercase">
+            <div class="row item text-right bottom-buttons">
+                <div class="col-xs-12 col-md-6 col-sm-6 hidden-xs"><a href="">Continue shopping</a></div>
+                <div class="col-xs-12 col-md-6 col-sm-6"><a class="btn btn-info" href="">Checkout</a></div>
+                <div class="col-xs-12 visible-xs"><a href="">Continue shopping</a></div>
+                <p class="text-right MT20 text-lowercase secure"><img src="images//lock.jpg"/>Secure
+                    checkout. Shopping is always safe & secure. </p>
+            </div>
+        </section>
+    </div>
+</section>

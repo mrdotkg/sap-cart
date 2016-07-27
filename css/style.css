@@ -1,0 +1,205 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size:12px;
+    color:#333;
+}
+a{
+    color: #333;
+}
+a:hover{
+    text-decoration: underline;
+}
+.form-control, .btn{
+    border-radius:0px;
+}
+.P0{
+    padding:0px !important;
+}
+.M0{
+    margin:0px;
+}
+.MT20{
+    margin-top:20px;
+}
+.MT30{
+    margin-top:30px;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+p img{
+    margin-right:5px;
+}
+.products{
+    border-top:5px solid #ccc;
+    border-bottom:5px solid #ccc;
+    margin:10px 0px;
+    padding:10px;
+}
+.product:last-child{
+    border:0px;
+}
+.products .product{
+    border-bottom:1px solid #d6d4d4;
+    padding:15px 0px;
+}
+.products .product:last-child{
+    border:0px;
+    padding-bottom: 0px;
+}
+.products .product input{
+    width: 50px;
+    padding: 0px;
+    border-radius:0px;
+}
+ul{
+    list-style-type: none;
+}
+.inline li{
+    display: inline;
+}
+.actions{
+    margin-top:-20px;
+}
+.inline li a{
+    padding:0px 7px;
+    color:#333;
+    border-right:1px solid #333;
+}
+.inline li:last-child a{
+    border:0px;
+}
+.taxes{
+    margin-top:30px;
+}
+.taxes a{
+    text-decoration: underline;
+}
+.taxes .products{
+    border-top:0px;
+    padding-bottom:20px;
+}
+.taxes .tax-calculation .item{
+    padding:15px 0px;
+    font-size:14px;
+}
+.taxes .btn{
+    text-decoration: none;
+}
+
+.taxes .tax-calculation .item strong{
+    font-size:16px;
+}
+.modal-body{
+    padding:35px 20px;
+}
+.modal-body .fa-remove {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    font-size: 30px;
+    color:#999;
+    cursor:pointer;
+}
+.modal-body .products{
+    border-bottom:0px;
+}
+.modal-body .products h3.heading{
+    margin-top:30px;
+    color:#ccc !important;
+}
+.modal-body .products h1{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.modal-body .products h1 sup{
+    color:#ccc !important;
+}
+.edit-products span input{
+    visibility: hidden;
+}
+.modal-body select{
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.modal-body .btn{
+    width:100%;
+}
+.edit-products .color-selector span{
+    width: 40%;
+    margin-right: 5px;
+}
+.edit-products .color-selector span.yellow-box{
+    /*background: yellow;*/
+    border: 1px solid #eaea18;
+}
+.edit-products .color-selector span.green-box{
+    background: green;
+    border: 1px solid #0db10d;
+}
+@media (max-width: 768px){
+    .inline{
+        display: inline-block !important;
+    }
+    .products .text-center, .products .amount{
+        text-align:left !important;
+    }
+    .products .qty{
+        margin-top:20px !important;
+    }
+    .products .qty input{
+        text-align:center !important;
+        width:50px;
+        margin-left:10px;
+        margin-top:10px;
+    }
+    .product-img{padding:0px;}
+    .products img{width:100%;}
+    .products .amount{
+        font-size:20px;
+        margin-top:20px;
+    }
+    .mobile{padding: 0px;}
+    .logo-text{font-size:20px;}
+    .products h3{font-size:14px;}
+    .actions{
+        margin-top:20px;
+    }
+    .coupon{
+        text-align: center;
+        font-size:14px;
+        text-transform: uppercase;
+    }
+    .coupon .input{
+        margin-top:20px;
+    }
+    .taxes .tax-calculation .item{
+        font-size:12px;
+    }
+    .secure img{
+        width:32px;
+    }
+    .bottom-buttons div{
+        text-align: center;
+        margin-bottom:20px;
+    }
+    .bottom-buttons p{
+        text-align: center;
+        line-height:10px;
+    }
+}
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 750px;
+        margin: 30px auto;
+    }
+    .modal-content{
+        border-radius: 0px;
+        box-shadow:none;
+        -webkit-box-shadow: none;
+    }
+}

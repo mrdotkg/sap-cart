@@ -1,0 +1,48 @@
+<div class="modal-body row">
+    <a ng-click="cancel()" href=""><i class="fa fa-remove"></i></a>
+    <div class="col-md-12">
+        <div class="col-md-5 text-center">
+            <section class="row products edit-products">
+                <h3 class="text-uppercase heading">{{product.p_name}}</h3>
+
+                <h1><sup> {{product.c_currency}} </sup>{{product.p_price * product.p_quantity}}</h1>
+
+                <div class="color-selector col-md-6 col-md-offset-3 text-center">
+                    <label class="text-upercase"> Color</label>
+                    <div class="clearfix"></div>
+                    <label ng-repeat="color in product.p_available_options.colors" >
+                        <input ng-model="product.p_selected_color" type="radio" name="color" ng-value="color"/>{{color.name}}
+                    </label>
+                </div>
+
+                <div class="row MT20 col-md-12">
+                    <div class="col-md-6">
+                        <select name="size" class="form-control"
+                                ng-options="option.name for option in product.p_available_options.sizes track by option.name"
+                                ng-model="product.p_selected_size"></select>
+                    </div>
+                    <div class="col-md-6">
+                        <select name="qty" class="form-control"
+                                ng-options="option for option in [1,2,3,4,5] track by option"
+                                ng-change="cart.addItem(product)"
+                                ng-model="product.p_quantity"></select>
+                    </div>
+                </div>
+
+                <!--<div class="col-md-12 tet-center MT20">-->
+                <!--<button class="btn btn-info" ng-click="ok()" name="edit">EDIT</button>-->
+                <!--</div>-->
+
+                <div class="col-md-12 tet-center">
+                    <a href="#">
+                        <small>See product details</small>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-7 text-center">
+            <img src="images/P1.jpg" class="" width="150"/>
+        </div>
+    </div>
+</div>
